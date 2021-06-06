@@ -5,6 +5,8 @@ azure-deploy.sh
 sample-usage.md
 SECURITY.md
 LICENSE
+CODE_OF_CONDUCT.md
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
