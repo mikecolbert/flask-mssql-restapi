@@ -101,10 +101,11 @@ class Queryable(Resource):
 
 # Temperature Class
 class Temperature(Queryable):
-    def get(self, temperatureId):
-        temperatures = {}
-        temperatures["TemperatureID"] = temperatureId
-        result = self.executeQueryJson("get", temperatures)
+    def get(self, temperature_id):
+        #temperatures = {}
+        #temperatures["TemperatureID"] = temperatureId
+        temperature = {"temperatureId" : temperature_id}
+        result = self.executeQueryJson("get", temperature)
         return result, 200
 
     def post(self):
