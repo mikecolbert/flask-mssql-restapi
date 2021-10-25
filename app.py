@@ -102,8 +102,6 @@ class Queryable(Resource):
 # Temperature Class
 class Temperature(Queryable):
     def get(self, temperature_id):
-        #temperatures = {}
-        #temperatures["TemperatureID"] = temperatureId
         temperature = {"temperatureId" : temperature_id}
         result = self.executeQueryJson("get", temperature)
         return result, 200
@@ -126,10 +124,9 @@ class Temperature(Queryable):
         result = self.executeQueryJson("patch", temperatures)
         return result, 202
 
-    def delete(self, temperatureId):
-        temperatures = {}
-        temperatures["TemperatureID"] = temperatureId
-        result = self.executeQueryJson("delete", temperatures)
+    def delete(self, temperature_id):
+        temperature = {"temperatureId" : temperature_id}
+        result = self.executeQueryJson("delete", temperature)
         return result, 202
 
 
