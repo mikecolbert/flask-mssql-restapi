@@ -32,7 +32,7 @@ parser.add_argument('temperature')
 parser.add_argument('humidity')
 
 # Implement singleton to avoid global objects
-
+#
 
 class ConnectionManager(object):
     __instance = None
